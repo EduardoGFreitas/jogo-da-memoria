@@ -1,20 +1,18 @@
-# Memory Game Project
+# Jogo da Memória
 
-## Table of Contents
+## Instruções
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+É um jogo simples de cartas, usado para testar a memória dos jogadores.
 
-## Instructions
+##Pontuação
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+1 estrela por encontrar todos os pares;
+2 estrelas por encontrar todos os pares em até 18 movimentos.
+3 estrelas por encontrar todos os pares em até 12 movimentos.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Como Jogar
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+O jogador deve encontrar todos os pares de cartas, revelando as cartas de duas em duas. Caso encontre um par, mantenha as cartas abertas, caso contrário vire as cartas para baixo e tente novamente.
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Desafio
+Encontrar todos os pares com a menor quantidade de movimentos.
