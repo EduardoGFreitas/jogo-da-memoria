@@ -100,7 +100,7 @@ class Game{
         }
         if (!iniciarJogo) {
             iniciarJogo = true;
-            cronometro = setTimeout(this.iniciarCronometro, 1000);
+            cronometro = setTimeout(game.iniciarCronometro(), 500);
         }
 
         if (cardsVirados.length < 2){
