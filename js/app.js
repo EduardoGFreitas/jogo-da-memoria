@@ -136,7 +136,7 @@ class Game{
     finalizarJogo(){
         let stars = $(".fa-star");
         Swal(`Parabéns`,
-             `Você terminou o jogo em  ${seg} segundos e com  ${stars.length}/3 estrelas.`,
+             `Você terminou o jogo em  ${seg} segundos e com ${stars.length} de 3 estrelas.`,
              'success');
              setTimeout(game.reset, 2000)
     }
