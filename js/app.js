@@ -6,6 +6,7 @@ let numeroJogadas= 0;
 let seg = 0;
 let cardsEncontrados = 0;
 let cronometro;
+let currentTimer;
 let timer = document.querySelector('#timer');
 
 
@@ -67,7 +68,7 @@ class Game{
             [].forEach.call(cards, function(item) {
                 document.querySelector(".deck").appendChild(item);
             });
-            cards[i].classList.remove("show", "open", "match", "disabled");
+            //cards[i].classList.remove("show", "open", "match", "disabled");
         }
     }
 
@@ -122,23 +123,34 @@ class Game{
     }
 
     iniciarCronometro() {
-    
-        let currentTimer = setInterval(() => {
+        currentTimer = setInterval(() => {
             timer.textContent= `${seg}`
             seg++;
         }, 1000);
     }
 
     reset(){
-        location.reload();
+        location.reload(currentTimer);
     }
 
     finalizarJogo(){
         let stars = $(".fa-star");
-        Swal(`Parabéns`,
-             `Você terminou o jogo em  ${seg} segundos e com ${stars.length} de 3 estrelas.`,
-             'success');
-             setTimeout(game.reset, 2000)
+        clearInterval(currentTimer)
+        swal({
+            title: 'Parabéns',
+            text: `Você terminou o jogo em  ${seg} segundos e com ${stars.length} de 3 estrelas.
+            Deseja jogar novamente? `,
+            type: 'success',
+            showCancelButton: true,
+            confirmButtonColor: '#2A4B66',
+            cancelButtonColor: '#FF231C',
+            confirmButtonText: 'Sim',
+            cancelButtonText: 'Não'
+          }).then((result) => {
+            if (result.value) {
+                setTimeout(game.reset, 500)
+            }
+          })
     }
 
 }
