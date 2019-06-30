@@ -1,5 +1,8 @@
 # Jogo da Memória
 
+## Visualizar o jogo
+[clique aqui](https://eduardogfreitas.github.io/jogo-da-memoria/)
+
 ## Instruções
 
 É um jogo simples de cartas, usado para testar a memória dos jogadores.
